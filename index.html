@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <!-- css styles -->
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/root.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0b5415b146.js" crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- tailwind css +  daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="./ios-gallery-icon-29.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="navbar-start">
+                <a class="btn btn-ghost text-xl space hover:bg-[#8a765083]">Projapoti's Gallery</a>
+            </div>
+
+            <div class="navbar-end">
+                <button id="category-toggle" class="btn bg-[#8A7650] text-white rounded-xl space">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span id="show-category-btn">Select Category</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="p-6 md:p-12 gallery">
+        <div id="category-bar" class="hidden flex flex-wrap gap-3 mb-6 items-center justify-end roboto">
+
+            <button class="category-btn px-4 py-2 border-3 rounded-lg bg-[#8A7650] border-[#8A7650] text-white"
+                data-category="all">
+                All
+            </button>
+
+            <button class="category-btn px-4 py-2 border-3 border-[#8A7650] rounded-lg hover:bg-gray-200"
+                data-category="nature">
+                Nature
+            </button>
+
+            <button class="category-btn px-4 py-2 border-3 border-[#8A7650] rounded-lg hover:bg-gray-200"
+                data-category="city">
+                City
+            </button>
+
+            <button class="category-btn px-4 py-2 border-3 border-[#8A7650]  rounded-lg hover:bg-gray-200"
+                data-category="people">
+                People
+            </button>
+            <button class="category-btn px-4 py-2 border-3 border-[#8A7650]  rounded-lg hover:bg-gray-200"
+                data-category="favourite">
+                Favourites
+            </button>
+
+        </div>
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="./Photos-3-001/IMG_20250213_132706.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_132734.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="people">
+
+            <img src="./Photos-3-002/B612_20250406_190750_965.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_132813.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="city">
+
+            <img src="./Photos-3-001/IMG_20250213_132819.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-002/B612_20250406_192854_195.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_132842.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="city">
+
+            <img src="./Photos-3-001/IMG_20250213_132944.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="people">
+
+            <img src="./Photos-3-001/IMG_20250213_133131.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./favourites photo/IMG_20241015_215750_761.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="favourite">
+
+            <img src="./Photos-3-001/IMG_20250213_133203.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="city">
+
+            <img src="./Photos-3-001/IMG_20250213_133206.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="people">
+
+
+            <img src="./Photos-3-002/B612_20250406_191558_619.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_133222.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-002/B612_20250406_192504_838.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_133228.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="city">
+
+            <img src="./Photos-3-001/IMG_20250213_133235.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="people">
+
+            <img src="./Photos-3-001/IMG_20250213_133313.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_133322.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="city">
+
+            <img src="./Photos-3-001/IMG_20250213_133326.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="people">
+
+            <img src="./Photos-3-002/B612_20250406_192543_726.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_133329.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_133331.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="city">
+
+            <img src="./favourites photo/IMG_20241015_215653_838.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="favourite">
+
+            <img src="./Photos-3-001/IMG_20250213_133341.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="people">
+
+            <img src="./Photos-3-001/IMG_20250213_133543.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_133548.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="city">
+
+            <img src="./Photos-3-001/IMG_20250213_133721.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="people">
+            <img src="./favourites photo/IMG_20241015_215648_387.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="favourite">
+
+            <img src="./Photos-3-001/IMG_20250213_133410.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-002/B612_20250406_192150_829.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+            <img src="./Photos-3-001/IMG_20250213_133412.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="city">
+
+            <img src="./Photos-3-001/IMG_20250213_133423.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="people">
+            <img src="./Photos-3-001/IMG_20250213_133655.jpg" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="people">
+            <img src="./Photos-3-002/B612_20250406_190304_835.png" alt=""
+                class="rounded-md cursor-pointer transform hover:scale-105 transition duration-300 gallery-img border-3 border-[#8A7650] p-2"
+                data-category="nature">
+
+
+
+
+
+
+        </div>
+        <!-- Lightbox Overlay -->
+        <div id="lightbox" class="fixed inset-0 bg-black/40 backdrop-blur-md hidden items-center justify-center z-50">
+
+            <!-- Previous Button -->
+            <button id="prev"
+                class="absolute left-6 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white p-4 rounded-full transition">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Image -->
+            <img id="lightbox-img" class="max-h-[80vh] rounded-lg shadow-2xl transition-transform duration-300">
+
+            <!-- Next Button -->
+            <button id="next"
+                class="absolute right-6 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white p-4 rounded-full transition">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Close Button -->
+            <button id="close"
+                class="absolute top-6 right-6 bg-white/20 hover:bg-red-500 text-white p-3 rounded-full transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+    </main>
+    <footer class="bg-base-200 text-base-content mt-16 space">
+
+        <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8 text-center">
+
+            <!-- Gallery Info -->
+            <div>
+                <h2 class="text-xl font-bold mb-2 ">Projapoti's Gallery</h2>
+                <p class="text-sm opacity-80">
+                    A personal photography collection capturing nature, city life,
+                    and beautiful everyday moments.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h2 class="text-lg font-semibold mb-2">Quick Links</h2>
+                <ul class="space-y-1 text-sm">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">Gallery</a></li>
+                    <li><a href="#" class="hover:underline">Categories</a></li>
+                    <li><a href="#" class="hover:underline">About</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h2 class="text-lg font-semibold mb-2">Connect</h2>
+
+                <div class="flex gap-4 text-xl items-center justify-center">
+
+                    <a href="#" class="hover:text-[#8A7650]">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="hover:text-[#8A7650]">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="hover:text-[#8A7650]">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#" class="hover:text-[#8A7650]">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom copyright -->
+        <div class="border-t border-base-300 text-center py-4 text-sm opacity-70">
+            © 2026 Projapoti's Gallery. All rights reserved.
+        </div>
+
+    </footer>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
